@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formulaire du swag</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <ul>
-        {% for message in messages %}
-        <li>{{ message.msg }} by {{ message.pseudo }}</li>
-        {% endfor %}
-    </ul>
-    <a href="/addMessage">Ajouter un message</a>
+    <div class="component-container">
+        <div class="component-list">
+            <ul>
+                {% for message in messages %}
+                <li>
+                    <div>{{ message.pseudo }}</div>
+                    <div>{{ message.msg }}</div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <form action="/post" method="POST" class="component-form" id="component-form">
+            <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo">
+            <textarea rows="2" cols="50" name="msg" placeholder="Message ..."></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
 </body>
 
 </html>

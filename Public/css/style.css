@@ -1,0 +1,73 @@
+body ,html{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.component-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.component-list{
+    flex-grow: 1; 
+    padding: 5px;  
+}
+
+.component-list>ul{
+    padding: 0;  
+    margin: 0;  
+}
+
+.component-list>ul>li{
+    padding: 5px;  
+    margin: 5px 0;  
+    display: flex;
+    flex-direction: column;  
+    border: 1px solid rgba(98, 98, 98, 0.24);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.component-list>ul>li>div:first-of-type{
+    color: #1A1A1A;
+}
+
+.component-list>ul>li>div:nth-of-type(2){
+    color: rgba(48, 48, 48, 0.24);
+}
+
+.component-form{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.component-form>input{
+    resize: vertical;
+    padding: 5px;
+    border-bottom: none;
+}
+
+.component-form>textarea{
+    resize: vertical;
+    padding: 5px
+}
+
+.component-form>button{
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #5252EA;
+    color: white;
+    border: 1px solid white;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.component-form>button:hover{
+    background-color: white;
+    color: #5252EA;
+    border: 1px solid #5252EA;
+}

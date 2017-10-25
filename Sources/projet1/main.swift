@@ -34,6 +34,7 @@ router.get("/") {
     next()
 }
 
+
 router.post("/post") {
     request, response, next in
     if(request.body != nil){
@@ -47,13 +48,6 @@ router.post("/post") {
         }
     }
     try response.redirect("/");
-    next()
-    
-}
-
-router.get("/addMessage") {
-    request, response, next in
-    try response.render("addMessage", context: [:])
     next()
     
 }
